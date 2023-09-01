@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaypointMovement : MonoBehaviour
@@ -7,9 +5,9 @@ public class WaypointMovement : MonoBehaviour
     [SerializeField] private Transform _path;
     [SerializeField] private float _speed;
     [SerializeField] private Transform[] _points;
+
     private SpriteRenderer _spriteRenderer;
     private int _currentPoint;
-    private bool _turn = false;
 
     private void Start()
     {
@@ -25,22 +23,12 @@ public class WaypointMovement : MonoBehaviour
         if (transform.position == target.position)
         {
             _currentPoint++;
-            _spriteRenderer.flipX = TurnAround(ref _turn);
+            _spriteRenderer.flipX = !_spriteRenderer.flipX;
 
             if (_currentPoint >= _points.Length)
             {
                 _currentPoint = 0;
             }
         }
-    }
-
-    private bool TurnAround(ref bool turn)
-    {
-        if (turn)
-        {
-            return turn = false;
-        }
-
-        return turn = true;
     }
 }

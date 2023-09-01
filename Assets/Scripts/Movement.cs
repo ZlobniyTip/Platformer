@@ -6,11 +6,11 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _jump;
+
     private SpriteRenderer _spriteRenderer;
     private bool _isRun;
 
     public bool IsRun => _isRun;
-
     public float Speed => _speed;
 
     private void Start()

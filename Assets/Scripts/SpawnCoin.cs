@@ -5,6 +5,7 @@ public class SpawnCoin : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoints;
     [SerializeField] private GameObject _coin;
+
     private Coroutine _spawnJob;
 
     private Transform[] _points;
@@ -17,11 +18,13 @@ public class SpawnCoin : MonoBehaviour
 
     private IEnumerator Spawn()
     {
+        var waitingUntilSpawn = new WaitForSeconds(3);
+
         for (int i = 0; i < _spawnPoints.childCount; i++)
         {
             _points[i] = _spawnPoints.GetChild(i);
             Instantiate(_coin, _points[i].transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(3);
+            yield return waitingUntilSpawn;
         }
     }
 }
