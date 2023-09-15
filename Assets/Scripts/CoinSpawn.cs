@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SpawnCoin : MonoBehaviour
+public class CoinSpawn : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoints;
     [SerializeField] private GameObject _coin;
