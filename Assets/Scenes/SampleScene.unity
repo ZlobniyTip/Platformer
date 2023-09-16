@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnPoints: {fileID: 1288598047}
-  _coin: {fileID: 6713647153115248819, guid: 14261f88c1c095746a9efb9693e520a2, type: 3}
+  _coin: {fileID: 6665876689083585250, guid: 14261f88c1c095746a9efb9693e520a2, type: 3}
 --- !u!1 &1959189095
 GameObject:
   m_ObjectHideFlags: 0

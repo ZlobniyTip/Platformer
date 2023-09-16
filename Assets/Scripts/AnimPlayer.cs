@@ -22,18 +22,11 @@ public class AnimPlayer : MonoBehaviour
 
     private void Update()
     {
-        Setup();
+        SetupAnimation();
     }
 
-    private void Setup()
+    private void SetupAnimation()
     {
-        if (_movement.IsRun == true)
-        {
-            _animator.SetBool(AnimPlayer.Params.IsRun, true);
-        }
-        else if (_movement.IsRun == false)
-        {
-            _animator.SetBool(AnimPlayer.Params.IsRun, false);
-        }
+        _animator.SetBool(AnimPlayer.Params.IsRun, _movement.IsRun);
     }
 }

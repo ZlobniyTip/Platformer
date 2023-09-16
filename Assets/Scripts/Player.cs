@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
         if (collision.collider.TryGetComponent(out Coin coin))
         {
             _currentCoins++;
-            Debug.Log($"Монет собрано: {_currentCoins}");
             Destroy(collision.collider.gameObject);
         }
     }

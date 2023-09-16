@@ -4,7 +4,7 @@ using UnityEngine;
 public class CoinSpawn : MonoBehaviour
 {
     [SerializeField] private Transform _spawnPoints;
-    [SerializeField] private GameObject _coin;
+    [SerializeField] private Coin _coin;
 
     private Coroutine _spawnJob;
 
